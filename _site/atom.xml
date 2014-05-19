@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>CodeInventory</title>
+ <link href="http://codeinventory.com/atom.xml" rel="self"/>
+ <link href="http://codeinventory.com/"/>
+ <updated>2014-05-20T00:42:41+05:30</updated>
+ <id>http://codeinventory.com</id>
+ <author>
+   <name>Amey Jadiye</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Functions in shell script</title>
+   <link href="http://codeinventory.com/2014/01/19/functions-in-shell-script/"/>
+   <updated>2014-01-19T15:09:00+05:30</updated>
+   <id>http://codeinventory.com/2014/01/19/functions-in-shell-script</id>
+   <content type="html">&lt;p&gt;Have  lot of repeated shell code ? try writing function in that :)&lt;/p&gt;
+
+&lt;p&gt;writing functions in any languages lowers the headache of any programmer , it implements DRY (Do not Repeat Yourself!) rule and that’s cool to why would i write code again and again ? that’s bullshit!&lt;/p&gt;
+
+&lt;p&gt;i am explaining very usefull methods and tricks to write and use functions within shell.&lt;/p&gt;
+
+&lt;p&gt;taking an example ,i need to fetch data from mysql again and again and have to write big repeated code again and again ,let’s write a function for that and just pass your query to it&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+ 
+sql_exec&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;root
+&lt;span class=&quot;nv&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;rut@123
+&lt;span class=&quot;nv&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mysql -u &lt;span class=&quot;nv&quot;&gt;$user&lt;/span&gt; -p&lt;span class=&quot;s1&quot;&gt;&amp;#39;$password&amp;#39;&lt;/span&gt; mydb -se &lt;span class=&quot;s2&quot;&gt;&amp;quot;$@&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+ 
+&lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;sql_exec &lt;span class=&quot;s2&quot;&gt;&amp;quot;select count(*) from my_table&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+ 
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;total number of rows are : &amp;#39;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$count&lt;/span&gt;
+ 
+&lt;span class=&quot;nv&quot;&gt;engr_count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;sql_exec &lt;span class=&quot;s2&quot;&gt;&amp;quot;select count(*) from my_table&amp;quot;&lt;/span&gt; where &lt;span class=&quot;nv&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;ENGR&amp;#39;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+ 
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;total engineer count is &amp;#39;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$engr_count&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39; this saved my code repeating &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here i passed all the coming arguments to functions to mysql by $@ you can differentiate  arguments by $1 $2 $3 ….. $n &lt;/p&gt;
+
+&lt;p&gt;Always remember unlike C ,Java or any other language you must write functions before calling to it.&lt;/p&gt;
+
+&lt;p&gt;you can either echo $result or return $result it doesn’t matter but i prefer echo as it doesn’t make side effects of escape characters like \t \n etc.&lt;/p&gt;
+
+&lt;p&gt;Hope you got how to use functions in shell.&lt;/p&gt;
+
+&lt;p&gt;Happy coding ….. :)&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

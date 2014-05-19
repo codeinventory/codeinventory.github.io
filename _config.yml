@@ -1,0 +1,25 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            CodeInventory
+#tagline:          'Personal blog'
+description:      "Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program."
+
+url:              http://codeinventory.com
+google_analytics_id:	UA-46791108-1
+author:
+  name:           'Amey Jadiye'
+  url:            https://twitter.com/ameyjadiye
+
+paginate:         3
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/codeinventory/codeinventory.github.io

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+  >
+<channel>
+    <title xml:lang="en">Jigar Patel - JAP</title>
+    <atom:link type="application/atom+xml" href="http://codeinventory.com/feed/" rel="self"/>
+    <link>http://codeinventory.com</link>
+    <pubDate>Tue, 20 May 2014 00:42:41 +0530</pubDate>
+    <lastBuildDate>Tue, 20 May 2014 00:42:41 +0530</lastBuildDate>
+    <language>en-US</language>
+    <description> @ameyjadiye on Twitter/Github/HN/Reddit</description>
+    
+    <item>
+        <title>Functions in shell script</title>
+        <link>http://jekyllrb.com/2014/01/19/functions-in-shell-script/</link>
+        <pubDate>Sun, 19 Jan 2014 15:09:00 +0530</pubDate>
+        <dc:creator>ameyjadiye</dc:creator>
+        <category>shell</category>
+        <category>linux</category>
+        <guid isPermaLink="false">/2014/01/19/functions-in-shell-script</guid>
+        <description><![CDATA[ <p>Have  lot of repeated shell code ? try writing function in that :)</p>
+
+<p>writing functions in any languages lowers the headache of any programmer , it implements DRY (Do not Repeat Yourself!) rule and that’s cool to why would i write code again and again ? that’s bullshit!</p>
+
+<p>i am explaining very usefull methods and tricks to write and use functions within shell.</p>
+
+<p>taking an example ,i need to fetch data from mysql again and again and have to write big repeated code again and again ,let’s write a function for that and just pass your query to it</p>
+
+<div class="highlight"><pre><code class="bash"><span class="c">#!/bin/sh</span>
+ 
+sql_exec<span class="o">()</span>
+<span class="o">{</span>
+<span class="nv">user</span><span class="o">=</span>root
+<span class="nv">password</span><span class="o">=</span>rut@123
+<span class="nv">result</span><span class="o">=</span>mysql -u <span class="nv">$user</span> -p<span class="s1">&#39;$password&#39;</span> mydb -se <span class="s2">&quot;$@&quot;</span>
+<span class="nb">echo</span> <span class="nv">$result</span>
+<span class="o">}</span>
+ 
+<span class="nv">count</span><span class="o">=</span><span class="k">$(</span>sql_exec <span class="s2">&quot;select count(*) from my_table&quot;</span><span class="k">)</span>
+ 
+<span class="nb">echo</span> <span class="s1">&#39;total number of rows are : &#39;</span> <span class="nv">$count</span>
+ 
+<span class="nv">engr_count</span><span class="o">=</span><span class="k">$(</span>sql_exec <span class="s2">&quot;select count(*) from my_table&quot;</span> where <span class="nv">job</span><span class="o">=</span><span class="s1">&#39;ENGR&#39;</span><span class="err">&quot;</span><span class="k">)</span>
+ 
+<span class="nb">echo</span> <span class="s1">&#39;total engineer count is &#39;</span><span class="nv">$engr_count</span> <span class="s1">&#39; this saved my code repeating &#39;</span>
+</code></pre></div>
+
+<p>Here i passed all the coming arguments to functions to mysql by $@ you can differentiate  arguments by $1 $2 $3 ….. $n </p>
+
+<p>Always remember unlike C ,Java or any other language you must write functions before calling to it.</p>
+
+<p>you can either echo $result or return $result it doesn’t matter but i prefer echo as it doesn’t make side effects of escape characters like \t \n etc.</p>
+
+<p>Hope you got how to use functions in shell.</p>
+
+<p>Happy coding ….. :)</p>
+ ]]></description>
+    </item>
+    
+</channel>
+</rss>
