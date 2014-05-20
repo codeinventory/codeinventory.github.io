@@ -31,7 +31,7 @@ count=$(sql_exec "select count(*) from my_table")
  
 echo 'total number of rows are : ' $count
  
-engr_count=$(sql_exec "select count(*) from my_table" where job='ENGR'")
+engr_count=$(sql_exec "select count(*) from my_table where job='ENGR'")
  
 echo 'total engineer count is '$engr_count ' this saved my code repeating '
 {% endhighlight %}
