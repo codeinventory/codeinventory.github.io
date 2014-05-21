@@ -105,7 +105,6 @@ h1, h2, h3, h4, h5, h6 {
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  display: flex;
   color: #505050;
 }
 .masthead-title a {
@@ -116,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   color: #c0c0c0;
   letter-spacing: 0;
+  vertical-align: super;
 }
 
 @media (max-width: 48rem) {
