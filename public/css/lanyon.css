@@ -41,11 +41,11 @@ body {
 }
 
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "Lato", Georgia, "Times New Roman", serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #313131;
   letter-spacing: -.025rem;
@@ -65,7 +65,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-
+.logo {
+  height: 10%;	
+  width: 10%;
+}
 /*
  * Container
  *
@@ -102,13 +105,14 @@ h1, h2, h3, h4, h5, h6 {
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
+  display: flex;
   color: #505050;
 }
 .masthead-title a {
   color: #505050;
 }
 .masthead-title small {
-  font-size: 75%;
+  font-size: 50%;
   font-weight: 400;
   color: #c0c0c0;
   letter-spacing: 0;
