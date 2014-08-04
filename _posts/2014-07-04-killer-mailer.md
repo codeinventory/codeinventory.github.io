@@ -9,9 +9,15 @@ tags:
 ---
 
 
-Hey guys i needed a mailer script which can send me hourly updates of my jobs and i dont had a SMTP details of my clients server neither access to it.
+Hey guys i always needed a mailer script which can send me hourly/daily/weekly updates of my diffrent programs running on linux box.
 
-i found a badass script in python which works well for me, hope it will help you too ;)
+I tried **sendmail** and **mutt** but they were not much impressive.
+
+I made a python script for myself and this works like KILLER.
+
+I dont had a SMTP details of my clients server neither access to it.
+
+This badass script in python  worked well for me, hope it will help you too ;)
 
 {% highlight python %}
 #!/usr/bin/python
@@ -48,3 +54,21 @@ s = smtplib.SMTP('localhost')
 s.sendmail(me, [you], msg.as_string())
 s.quit()
 {% endhighlight %}
+
+if you do adjust following things you can send attachment too.
+
+```python
+from email.mime.image import MIMEImage
+from email.mime.multipart import MIMEMultipart
+
+file='/home/amey-xps/logs/server.out.png'
+fp = open(file, 'rb')
+img = MIMEImage(fp.read())
+fp.close()
+msg.attach(img)
+
+# I used image here , you can use diffrent file types with MIMEText, MIMEImage, MIMEAudio, MIMEBase
+```
+
+
+Happy coding ..... :)
