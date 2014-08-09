@@ -2,13 +2,14 @@
 author: ameyjadiye
 layout: post
 title: "Timezone conversion in python -Easy way"
-date: 2014-08-08 19:17
+date: 2014-08-08 10:17
 comments: true
 tags:
 - python
 ---
 
 This lib i found most usefulll [python-dateutil](http://niemeyer.net/python-dateutil).
+
 ```bash
 sudo pip install python-dateutil
 ```
@@ -16,6 +17,7 @@ sudo pip install python-dateutil
 {% highlight python %}
 from datetime import datetime
 from dateutil import tz
+
 date_str = "2014-08-08 19:18:01"
 fmt="%Y-%m-%d %H:%M:%S"
 from_zone = tz.gettz('UTC')

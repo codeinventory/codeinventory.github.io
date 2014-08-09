@@ -2,7 +2,7 @@
 author: ameyjadiye
 layout: post
 title: "Killer mailer script in Python"
-date: 2014-088888888-04 09:23
+date: 2014-08-04 09:23
 comments: true
 tags:
 - python
