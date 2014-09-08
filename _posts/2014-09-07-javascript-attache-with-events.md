@@ -30,15 +30,15 @@ Its very easy wayto make your component responsive.
 
 it's so easy right? you can attach helllot of events, few of them i described below.
 
-
-|Event      | Description                                        |
-|-----------| ---------------------------------------------------|
-|onchange   | An HTML element has been changed                   |
-|onclick    | The user clicks an HTML element                    |
-|onmouseover| The user moves the mouse over an HTML element      |
-|onmouseout | The user moves the mouse away from an HTML element |
-|onkeydown  | The user pushes a keyboard key                     |
-|onload     | The browser has finished loading the page          |
+<table>
+<tr><th>Event</th><th>Description</th></tr>
+<tr><td>onchange</td><td>An HTML element has been changed</td></tr>
+<tr><td>onclicke</td><td>The user clicks an HTML element</td></tr>
+<tr><td>onmouseovere</td><td>The user moves the mouse over an HTML element</td></tr>
+<tr><td>onmouseoute</td><td>The user moves the mouse away from an HTML element</td></tr>
+<tr><td>onkeydowne</td><td>The user pushes a keyboard key</td></tr>
+<tr><td>onloade</td><td>The browser has finished loading the page</td></tr>
+</table>
 
 #### Note : dont use 'on' when passing your event to method addEventListener
 
