@@ -207,6 +207,8 @@ img {
   width: 100%;
 }
 
+
+
 /* Tables */
 table {
   margin-bottom: 1rem;
@@ -266,7 +268,14 @@ tbody tr:nth-child(odd) th {
   margin-right: auto;
 }
 
-
+.amey-img {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#images{
+    text-align:center;
+}
 /*
  * Masthead
  *
