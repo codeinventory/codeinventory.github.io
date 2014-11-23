@@ -16,7 +16,7 @@ I was lucky i got it early but my nexus4 also had Ubuntu so at the time of reboo
 Here are few steps i did for flashing my Nexus 4, that will upgrade your kitkat 4.4.4 (KTU84P) to **Lollipop 5.0 (LRX21T)**, easy to do for you guys :)
 
 
-+ First thing is to install ADB and Fastboot to your machine, i use ubuntu so _apt-get_ is easy way to get it.
++ First thing is to install ADB and Fastboot to your machine, i use ubuntu so **apt-get** is easy way to get it.
 
 ```
 sudo add-apt-repository ppa:phablet-team/tools
@@ -157,6 +157,6 @@ rebooting...
 finished. total time: 150.897s
 ```
 
-If your phone missbehave after finishing, just hard reboot it pressing power button for 5 sec.
+If your phone missbehave after finishing, just hard reboot it pressing power button for few seconds.
 
 Happy coding ..... :)
