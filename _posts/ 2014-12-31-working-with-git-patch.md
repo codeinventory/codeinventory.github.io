@@ -19,25 +19,25 @@ So here are steps to work with it.
 
 + create patch file with last few commits, say i want to send my last 3 commits to review and apply do :
 
-{% highlight bash bash %} 
+{% highlight bash%} 
 git format-patch -3 HEAD --stdout > my-last-3-commits.patch
 {% endhighlight %}
 
 + Applying patch (this is for reviewer)
 First step is check the patch.
-{% highlight bash bash%}
+{% highlight bash%}
 git apply --stat my-last-3-commits.patch
 {% endhighlight %}
 
 Second  step is check the patch, git allows you to try it and see how troublesome is the code.
-{% highlight bash bash%}
+{% highlight bash%}
 git apply --check my-last-3-commits.patch
 {% endhighlight %}
 
 If it didnt gave any error, you are good to go.
 
 Now final part is to use git am rather than git apply as it allows you to *sign off* the commit for future reffrence.
-{% highlight bash bash%}
+{% highlight bash%}
 git am --signoff < my-last-3-commits.patch
 {% endhighlight %}
 
