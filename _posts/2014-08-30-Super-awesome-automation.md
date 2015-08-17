@@ -105,6 +105,6 @@ below are the few screen shots taken from my test.
 ![Screenshot2]({{ site.url }}/images/screenshot-3.jpeg)
 ![Screenshot3]({{ site.url }}/images/screenshot-4.jpeg)
 
-Unknowingly i found a bug in browserstack, see the screeshot's, by default they should use english but google page is i Dutch, may be their servers are located in europ with dutch version of OS :p
+Unknowingly i found a bug in browserstack, see the screeshot's, by default they should use english but google page is in Dutch, may be their servers are located in europ with dutch version of OS :p
 
 Happy coding .... :)
