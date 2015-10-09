@@ -27,3 +27,5 @@ Today i'm doing kickoff of rc plane builing as my hobby project, after tones of 
 + Hot Glue Gun (₹500)
 + 2 Inch Cello tape (₹50)
 + flight controller, (I 'll try if i can use RPi2 for this, extra gyro will need)
+
+<img align="center" src="http://www.generalhobby.com/images/products/spirit-freewing-1.png" />
