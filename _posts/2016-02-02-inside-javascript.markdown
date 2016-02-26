@@ -30,7 +30,7 @@ Javascript Types
 
 문자배열로 접근 가능
 
-```Javascript
+``` Javascript
 var str = 'test';
 console.log(str[0]);	// (output) t
 ```
