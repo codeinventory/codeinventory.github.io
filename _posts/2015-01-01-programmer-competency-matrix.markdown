@@ -7,7 +7,7 @@ tags: programmer, study
 ---
 
 * Source : [Programmer Competency Matrix](http://sijinjoseph.com/programmer-competency-matrix/)
-* Translation : [프로그램 역량 체크](https://docs.google.com/document/d/1hnsBid61Ak7YVMerGZuxbHLFgTZ_pRwUs2-xwbkvNpc/edit)
+* Translation : [개발자의 역량 측정 메트릭스](http://blog.daum.net/effortless/7864712)
 
 ### 컴퓨터 과학
 
