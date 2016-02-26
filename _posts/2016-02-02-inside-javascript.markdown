@@ -29,14 +29,12 @@ Javascript Types
 ## 문자열
 
 문자배열로 접근 가능
-
     {% highlight Javascript %}
     var str = 'test';
     console.log(str[0]);	// (output) t{% endhighlight %}
 
 
 문자배열로 수정은 안됨
-
     {% highlight Javascript %}
     str[0] = 'T';
     console.log(str[0]);	// (output) t{% endhighlight %}
