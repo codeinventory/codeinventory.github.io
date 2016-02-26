@@ -532,7 +532,7 @@ html, body, .notepad-post-container, .notepad-post-header {
 pre {
   padding-top: 0.5625rem;
   padding-bottom: 0.5625rem;
-  margin-left: 0.9375rem;
+  padding-left: 0.5625rem;
   word-wrap: break-word;
   background: #f2f2f2;
   margin-bottom: 1.5625rem; }
