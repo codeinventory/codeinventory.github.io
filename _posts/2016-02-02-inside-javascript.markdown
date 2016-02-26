@@ -32,15 +32,14 @@ Javascript Types
 
     {% highlight Javascript %}
     var str = 'test';
-    console.log(str[0]);	// (output) t
-    {% endhighlight %}
+    console.log(str[0]);	// (output) t{% endhighlight %}
+
 
 문자배열로 수정은 안됨
 
     {% highlight Javascript %}
     str[0] = 'T';
-    console.log(str[0]);	// (output) t
-    {% endhighlight %}
+    console.log(str[0]);	// (output) t{% endhighlight %}
 
 ## null과 undefined
 

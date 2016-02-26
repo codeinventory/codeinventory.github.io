@@ -540,7 +540,6 @@ figcaption {
     -moz-border-radius: 4px;
     border-radius: 4px;
 }
-.highlight  { background: #f2f2f2; }
 .highlight .c { color: #3F6B5B; font-weight: bold} /* Comment */
 .highlight .err { color: #000000} /* Error */
 .highlight .g { color: #000000} /* Generic */
