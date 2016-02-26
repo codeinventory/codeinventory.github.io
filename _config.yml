@@ -1,31 +1,32 @@
-title:            CodeInventory
-description:      "Nerd's feeder!"
+title:            Goldbass
+description:      "개발자 인듯 일반인 아닌 운영자 같은 개발자"
 logo:             logo.png
-disqus_shortname: codeinventorycom
+disqus_shortname: goldbassist
 share:            true
 dropcap:	   true
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
-url:        	 http://www.codeinventory.com
+url:        	http://192.168.99.100:4000
 
 # Owner/author information
 owner:
-  name:           Amey Jadiye
-  avatar:         ameyjadiye.jpg
-  email:          ameyjadiye@gmail.com
+  name:           Seungrok Han
+  avatar:         face.jpg
+  email:          goldbassist@naver.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    Programming is 1% knowledge, 2% ability and 97% getting the ability to work with the knowledge :)
+  
+  #description:    Programming is 1% knowledge, 2% ability and 97% getting the ability to work with the knowledge :)
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        ameyjadiye
-  facebook:       ameyjadiye
-  github:         ameyjadiye    
-  instagram:      ameyjadiye
+  #twitter:        
+  facebook:       goldbassist
+  github:         goldbassist    
+  #instagram:      
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    https://plus.google.com/u/0/+AmeyJadiye
+  google_plus:    
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   UA-46791108-1
+google_analytics:   
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
@@ -43,7 +44,7 @@ links:
     url: /about
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Calcutta
+timezone:    Asia/Seoul
 future:      true
 highlighter: pygments
 markdown:    kramdown
@@ -58,7 +59,7 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: false
+  enable_coderay: false
 
   coderay:
     coderay_line_numbers: 
@@ -69,4 +70,5 @@ kramdown:
 
 gems:
 - jemoji
+- jekyll-paginate
 

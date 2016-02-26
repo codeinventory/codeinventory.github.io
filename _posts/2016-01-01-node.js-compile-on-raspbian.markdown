@@ -1,0 +1,120 @@
+---
+layout: post
+title:  "Node.js Compilation on Raspbian, Raspberrypi 2"
+date:   2016-01-01 23:40:00
+categories: servers
+tags: node.js
+---
+
+개인적으로 영 적응이 안되던 Node.js가 5.3.0 까지 나왔다.
+라즈베리파이에서 한번 써볼까 하여 compile을 해보았다.
+
+### Compile 을 위한 준비
+Raspbian Jessie는 개인적으로 아직까지 잘 사용하지 않는다.
+Jessie와 Wheezy는 커널 구조상 다른지, 컴파일러 버전때문인지, 컴파일시 호환이 안되는 부분이 상당하다.
+이번 Node.js도 마찬가지로, Jessie에서는 되는지 모르겠으나, Wheezy에서는 컴파일이 되지 않는다.
+다행히 먼저 해결해논 용자가 있어 참고 하였다. ( 없었더라면 한달은 삽질을 하지 않았을까 싶다. 성공이나 했으려나...)
+[Node.js v4 & v5 on Raspberry Pi 2][nodejs4onRaspberrypi2-link]
+
+gcc version을 바꾸는 일이다.
+
+/etc/apt/sources.list 파일의 Repository를 아래와 같이 수정한다.
+
+```Bash
+$ sudo nano /etc/apt/sources.list
+```
+
+```vi
+deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
+# Remove '#'Character
+deb http://archive.raspbian.org/raspbian wheezy main contrib non-free rpi
+
+# Source repository to add
+deb-src http://archive.raspbian.org/raspbian wheezy main contrib non-free rpi
+deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi
+deb http://archive.raspbian.org/raspbian jessie main contrib non-free rpi
+# Source repository to add
+deb-src http://archive.raspbian.org/raspbian jessie main contrib non-free rpi
+```
+
+/etc/apt/preferences 파일을 새로 만든다.
+
+```Bash
+$ sudo nano /etc/apt/preferences
+```
+
+```vi
+Package: *
+Pin: release n=wheezy
+Pin-Priority: 900
+Package: *
+Pin: release n=jessie
+Pin-Priority: 300
+Package: *
+Pin: release o=Raspbian
+Pin-Priority: -10
+```
+
+Raspbian 의 Package List를 업데이트 한다.
+
+```Bash
+$ sudo apt-get update
+```
+
+Jessie Repositories의 gcc/g++ 4.8을 인스톨한다.
+
+```Bash
+$ sudo apt-get install -t jessie gcc-4.8 g++-4.8
+$ sudo update-alternatives --remove-all gcc
+$ sudo update-alternatives --remove-all g++
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 20
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
+$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 20
+$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
+```
+
+gcc version을 확인해보자.
+
+```Bash
+$ sudo gcc --version
+```
+
+혹시, gcc버전을 바꾸고 싶다면 아래와 같이 하면 된다.
+
+```Bash
+$ sudo update-alternatives --config gcc
+$ sudo update-alternatives --config g++
+```
+
+### Source Download
+[nodejs.org 공식홈의 Download Page][nodejs.org-link]에서 Source Code 주소를 얻을 수 있다.
+
+라즈베리파이에서 아래와 같이 하여 source 파일을 download한다.
+
+```Bash
+$ wget https://nodejs.org/dist/v4.2.4/node-v4.2.4.tar.gz
+$ tar -xzf node-v4.2.4.tar.gz
+```
+
+### Compile & Install Node.js
+
+```Bash
+$ cd node-v4.2.4
+$ ./configure
+$ make -j4
+$ sudo make install
+```
+
+Node.js의 버전을 확인하여 Install이 완료되었는지 확인하자.
+
+```Bash
+$ node -v
+$ npm -v
+```
+
+다음으로는, Express도 깔고 Javascript프로젝트도 돌려보도록 하자. (언제가 될지 모르지만...)
+
+[nodejs.org-link]:			https://nodejs.org/en/download/
+[nodejs4onRaspberrypi2-link]:http://andyfelong.com/2015/11/node-js-v4-1-0-on-raspberry-pi-2/
+
+ 
