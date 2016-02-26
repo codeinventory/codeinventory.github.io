@@ -533,11 +533,13 @@ pre {
   padding-top: 0.5625rem;
   padding-bottom: 0.5625rem;
   padding-left: 0.5625rem;
+  margin-left: 0.9375rem;
   word-wrap: break-word;
   background: #f2f2f2;
   margin-bottom: 1.5625rem; }
 
 code {
+  padding-left: 0.5625rem;
   font-size: 0.9375rem;
   line-height: 1.2; }
 
