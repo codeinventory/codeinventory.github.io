@@ -36,54 +36,52 @@ console.log(str[0]);	// (output) t
 
 
 문자배열로 수정은 안됨
-    {% highlight Javascript %}
-    str[0] = 'T';
-    console.log(str[0]);	// (output) t
-    {% endhighlight %}
+{% highlight Javascript %}
+str[0] = 'T';
+console.log(str[0]);	// (output) t
+{% endhighlight %}
 
 ## null과 undefined
 
 `null`의 type은 `object`
 
-    {% highlight Javascript %}
-    var strUnd;
-    console.log(strUnd);		// (output) undefined
-    console.log(typeof strUnd);	// (output) undefined
+{% highlight Javascript %}
+var strUnd;
+console.log(strUnd);		// (output) undefined
+console.log(typeof strUnd);	// (output) undefined
 
-    var strNull = null;
-    console.log(strNull);		// (output) null
-    console.log(typeof strNull);// (output) object
+var strNull = null;
+console.log(strNull);		// (output) null
+console.log(typeof strNull);// (output) object
 
-    console.log(typeof strNull === null);	// (output)	false
-    console.log(strNull === null);			// (output)	true
-    {% endhighlight %}
+console.log(typeof strNull === null);	// (output)	false
+console.log(strNull === null);			// (output)	true
+{% endhighlight %}
 
 ## 객체 생성
 
 객체를 생성하는 세가지 방법
 
-    {% highlight text%}
-    1. Object() 생성자 함수 이용
-    2. 객체 리터럴을 이용하는 방법
-    3. 생성자 함수를 이용하는 방법
-    {% endhighlight %}
+{% highlight text%}
+1. Object() 생성자 함수 이용
+2. 객체 리터럴을 이용하는 방법
+3. 생성자 함수를 이용하는 방법
+{% endhighlight %}
 
 > #### 1. Object() 생성자 함수 이용
-
-    {% highlight Javascript %}
-    var foo = Object();
-     
-    foo.name = 'foo';
-    {% endhighlight %}
+{% highlight Javascript %}
+var foo = Object();
+foo.name = 'foo';
+{% endhighlight %}
 
 > #### 2. 객체 리터럴을 이용하는 방법
 
 >> 객체를 생성하는 표기법
-    {% highlight Javascript %}
-    var foo = {
-    	name : 'foo'
-    };
-    {% endhighlight %}
+{% highlight Javascript %}
+var foo = {
+	name : 'foo'
+};
+{% endhighlight %}
 
 > #### 3. 생성자 함수를 이용하는 방법
 
@@ -91,34 +89,34 @@ console.log(str[0]);	// (output) t
 
 #### Read Property
 
-    {% highlight Javascript %}
-    console.log(foo.name);
-    console.log(foo['name']);
-    {% endhighlight %}
+{% highlight Javascript %}
+console.log(foo.name);
+console.log(foo['name']);
+{% endhighlight %}
 
 #### Update Property
 
-    {% highlight Javascript %}
-    foo['name'] = 'newfoo';
-    console.log(foo['name']);	// (output) newfoo
-    {% endhighlight %}
+{% highlight Javascript %}
+foo['name'] = 'newfoo';
+console.log(foo['name']);	// (output) newfoo
+{% endhighlight %}
 
 #### 대괄호 표기법만 사용해야 하는 경우
 
-    {% highlight Javascript %}
-    // 표현식이거나 예약어일 경우
-    foo['full-name'] = 'foo bar';	// '-' 연산자가 포함됨
-    {% endhighlight %}
+{% highlight Javascript %}
+// 표현식이거나 예약어일 경우
+foo['full-name'] = 'foo bar';	// '-' 연산자가 포함됨
+{% endhighlight %}
 
 #### Delete property
 
-    {% highlight Javascript %}
-    console.log(foo.name);	// (output) newfoo
-    delete foo.name;		// delete name property
-    console.log(foo.name);	// (output) undefined
+{% highlight Javascript %}
+console.log(foo.name);	// (output) newfoo
+delete foo.name;		// delete name property
+console.log(foo.name);	// (output) undefined
 
-    foo.name = 'newfoo';
-    delete foo;				// delete foo object
-    console.log(foo.name);	// (output) newfoo
-    {% endhighlight %}
+foo.name = 'newfoo';
+delete foo;				// delete foo object
+console.log(foo.name);	// (output) newfoo
+{% endhighlight %}
 

@@ -20,11 +20,11 @@ gcc version을 바꾸는 일이다.
 
 /etc/apt/sources.list 파일의 Repository를 아래와 같이 수정한다.
 
-```Bash
+{% highlight Shell %}
 $ sudo nano /etc/apt/sources.list
-```
+{% endhighlight %}
 
-```vi
+{% highlight Shell %}
 deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
 # Remove '#'Character
 deb http://archive.raspbian.org/raspbian wheezy main contrib non-free rpi
@@ -35,15 +35,15 @@ deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rp
 deb http://archive.raspbian.org/raspbian jessie main contrib non-free rpi
 # Source repository to add
 deb-src http://archive.raspbian.org/raspbian jessie main contrib non-free rpi
-```
+{% endhighlight %}
 
 /etc/apt/preferences 파일을 새로 만든다.
 
-```Bash
+{% highlight Shell %}
 $ sudo nano /etc/apt/preferences
-```
+{% endhighlight %}
 
-```vi
+{% highlight Shell %}
 Package: *
 Pin: release n=wheezy
 Pin-Priority: 900
@@ -53,17 +53,17 @@ Pin-Priority: 300
 Package: *
 Pin: release o=Raspbian
 Pin-Priority: -10
-```
+{% endhighlight %}
 
 Raspbian 의 Package List를 업데이트 한다.
 
-```Bash
+{% highlight Bash %}
 $ sudo apt-get update
-```
+{% endhighlight %}
 
 Jessie Repositories의 gcc/g++ 4.8을 인스톨한다.
 
-```Bash
+{% highlight Shell %}
 $ sudo apt-get install -t jessie gcc-4.8 g++-4.8
 $ sudo update-alternatives --remove-all gcc
 $ sudo update-alternatives --remove-all g++
@@ -71,46 +71,46 @@ $ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 20
 $ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
 $ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 20
 $ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
-```
+{% endhighlight %}
 
 gcc version을 확인해보자.
 
-```Bash
+{% highlight Shell %}
 $ sudo gcc --version
-```
+{% endhighlight %}
 
 혹시, gcc버전을 바꾸고 싶다면 아래와 같이 하면 된다.
 
-```Bash
+{% highlight Shell %}
 $ sudo update-alternatives --config gcc
 $ sudo update-alternatives --config g++
-```
+{% endhighlight %}
 
 ### Source Download
 [nodejs.org 공식홈의 Download Page][nodejs.org-link]에서 Source Code 주소를 얻을 수 있다.
 
 라즈베리파이에서 아래와 같이 하여 source 파일을 download한다.
 
-```Bash
+{% highlight Shell %}
 $ wget https://nodejs.org/dist/v4.2.4/node-v4.2.4.tar.gz
 $ tar -xzf node-v4.2.4.tar.gz
-```
+{% endhighlight %}
 
 ### Compile & Install Node.js
 
-```Bash
+{% highlight Shell %}
 $ cd node-v4.2.4
 $ ./configure
 $ make -j4
 $ sudo make install
-```
+{% endhighlight %}
 
 Node.js의 버전을 확인하여 Install이 완료되었는지 확인하자.
 
-```Bash
+{% highlight Shell %}
 $ node -v
 $ npm -v
-```
+{% endhighlight %}
 
 다음으로는, Express도 깔고 Javascript프로젝트도 돌려보도록 하자. (언제가 될지 모르지만...)
 

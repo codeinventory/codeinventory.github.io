@@ -30,22 +30,23 @@ ubuntu에서는 [Gparted][gparted-link]를 사용하여 GUI환경으로 resize�
 알다시피 라즈베리파이SD에는 두개의 partitions으로 되어있다.
 `vfat`과 `ext4`으로, 실제 부팅 partition인 ext4를 OSX에서 인식하기 위해서는 추가 S/W가 필요하다.
 이를 해결하기 위해 [E2fsprogs: Ext2/3/4 Filesystem Utilities][e2fsprogs-link]를 설치하자.
-```
+
+{% highlight Shell %}
 $ brew install e2fsprogs
-```
+{% endhighlight %}
 
 [Homebrew][Homebrew-link]가 설치되지 않아 `brew`명령어가 깔려있지 않다면, [http://brew.sh][Homebrew-link]를 참고하기 바란다.
 
 ### Resize SD Card
 
 저장 위치를 알지 못해서 검색해보았다.
-```
+{% highlight Shell %}
 $ sudo find / -name e2fsprogs
-```
+{% endhighlight %}
 
 `/usr/local/opt/e2fsprogs`에 설치되었으니 이동하여 확인해보자.
 
-```
+{% highlight Shell %}
 $ cd /usr/local/opt/e2fsprogs
 $ ls
 COPYING			bin			lib
@@ -59,19 +60,19 @@ debugfs		e2undo		fsck.ext4	mkfs.ext4
 dumpe2fs	filefrag	fsck.ext4dev	mkfs.ext4dev
 e2freefrag	findfs		logsave		mklost+found
 e2fsck		fsck		mke2fs		resize2fs
-```
+{% endhighlight %}
 `resize2fs`명령어가 보인다. 
 실행시켜보니 실행은 안되고 `e2fsck -f`를 실행하라고 친절하게 알려준다.
 순진하게 그대로 따라한다.
-```
+{% highlight Shell %}
 $ sudo ./e2fsck -f /dev/disk2s2
-```
+{% endhighlight %}
 `/dev/disk2s2`는 resize 하고자 하는 ext partition이다.
 라즈베리파이의 root partition을 resize하고 있는 중이다.
 완료되고 나서 resize2fs를 실행하자.
-```
+{% highlight Shell %}
 $ sudo ./resize2fs /dev/disk2s2 4G
-```
+{% endhighlight %}
 partition을 4G로 resize하였다. 
 위에 언급한 ubuntu에서는 최소 용량을 가이드해 주는데, 여기서는 알아낼 방법을 모르니 그냥 4G로 넘겨짚었다. 
 용량을 모른다면 알고 나서 진행하도록 하자. `실제사용량 +200M` 가 안전할 듯 하다.
@@ -84,9 +85,9 @@ partition을 4G로 resize하였다.
 SD Card 용량이 고스란히 Backup 될 것이다. 32G SD라면 .img의 용량은 32G가 될 것이고, 시간은 1시간이 걸릴지 모른다.
 
 아래의 명령어로 Backup해 보자. OSX나 Linux등에서 사용가능한 명령어다.
-```
+{% highlight Shell %}
 $ sudo dd if=/dev/disk2 of=/home/rasplay/raspberrypibackup.img bs=1m count=4800
-```
+{% endhighlight %}
 
 이제 라즈베리파이에서 돌려보자.
 잘 돌아가는지 모르겠다.
