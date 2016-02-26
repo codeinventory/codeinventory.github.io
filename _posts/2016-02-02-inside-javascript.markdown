@@ -15,77 +15,76 @@ Javascript.<br>
 Javascript Types
 
 1. 기본 타입
-	1. Number
-	1. String
-	1. Boolean
-	1. undefined
-	1. null
+    1. Number
+    1. String
+    1. Boolean
+    1. undefined
+    1. null
 1. 참조 타입
-	1. Object
-		1. Array
-		1. Function
-		1. Regular Expression
+    1. Object
+    	1. Array
+    	1. Function
+    	1. Regular Expression
 
 ## 문자열
 
 문자배열로 접근 가능
 
-{% highlight Javascript %}
-var str = 'test';
-console.log(str[0]);	// (output) t
-{% endhighlight %}
+    {% highlight Javascript %}
+    var str = 'test';
+    console.log(str[0]);	// (output) t
+    {% endhighlight %}
 
 문자배열로 수정은 안됨
 
-```Javascript
-str[0] = 'T';
-console.log(str[0]);	// (output) t
-```
+    {% highlight Javascript %}
+    str[0] = 'T';
+    console.log(str[0]);	// (output) t
+    {% endhighlight %}
 
 ## null과 undefined
 
 `null`의 type은 `object`
 
-```Javascript
-var strUnd;
-console.log(strUnd);		// (output) undefined
-console.log(typeof strUnd);	// (output) undefined
+    {% highlight Javascript %}
+    var strUnd;
+    console.log(strUnd);		// (output) undefined
+    console.log(typeof strUnd);	// (output) undefined
 
-var strNull = null;
-console.log(strNull);		// (output) null
-console.log(typeof strNull);// (output) object
+    var strNull = null;
+    console.log(strNull);		// (output) null
+    console.log(typeof strNull);// (output) object
 
-console.log(typeof strNull === null);	// (output)	false
-console.log(strNull === null);			// (output)	true
-```
+    console.log(typeof strNull === null);	// (output)	false
+    console.log(strNull === null);			// (output)	true
+    {% endhighlight %}
 
 ## 객체 생성
 
 객체를 생성하는 세가지 방법
 
-```
-1. Object() 생성자 함수 이용
-2. 객체 리터럴을 이용하는 방법
-3. 생성자 함수를 이용하는 방법
-```
+    {% highlight text%}
+    1. Object() 생성자 함수 이용
+    2. 객체 리터럴을 이용하는 방법
+    3. 생성자 함수를 이용하는 방법
+    {% endhighlight %}
 
 > #### 1. Object() 생성자 함수 이용
 
->> ```Javascript
->> var foo = Object();
->> 
->> foo.name = 'foo';
->> ```
+    {% highlight Javascript %}
+    var foo = Object();
+     
+    foo.name = 'foo';
+    {% endhighlight %}
 
 > #### 2. 객체 리터럴을 이용하는 방법
 
 >> 객체를 생성하는 표기법
-
->> ```Javascript
->> var foo = {
->> 	name : 'foo'
->> };
->> ```
+    {% highlight Javascript %}
+    var foo = {
+    	name : 'foo'
+    };
+    {% endhighlight %}
 
 > #### 3. 생성자 함수를 이용하는 방법
 
@@ -93,34 +92,34 @@ console.log(strNull === null);			// (output)	true
 
 #### Read Property
 
-```Javascript
-console.log(foo.name);
-console.log(foo['name']);
-```
+    {% highlight Javascript %}
+    console.log(foo.name);
+    console.log(foo['name']);
+    {% endhighlight %}
 
 #### Update Property
 
-``` Javascript
-foo['name'] = 'newfoo';
-console.log(foo['name']);	// (output) newfoo
-```
+    {% highlight Javascript %}
+    foo['name'] = 'newfoo';
+    console.log(foo['name']);	// (output) newfoo
+    {% endhighlight %}
 
 #### 대괄호 표기법만 사용해야 하는 경우
 
-```Javascript
-// 표현식이거나 예약어일 경우
-foo['full-name'] = 'foo bar';	// '-' 연산자가 포함됨
-```
+    {% highlight Javascript %}
+    // 표현식이거나 예약어일 경우
+    foo['full-name'] = 'foo bar';	// '-' 연산자가 포함됨
+    {% endhighlight %}
 
 #### Delete property
 
-```Javascript
-console.log(foo.name);	// (output) newfoo
-delete foo.name;		// delete name property
-console.log(foo.name);	// (output) undefined
+    {% highlight Javascript %}
+    console.log(foo.name);	// (output) newfoo
+    delete foo.name;		// delete name property
+    console.log(foo.name);	// (output) undefined
 
-foo.name = 'newfoo';
-delete foo;				// delete foo object
-console.log(foo.name);	// (output) newfoo
-```
+    foo.name = 'newfoo';
+    delete foo;				// delete foo object
+    console.log(foo.name);	// (output) newfoo
+    {% endhighlight %}
 
