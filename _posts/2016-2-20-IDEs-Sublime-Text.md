@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[IDE] Sublime Text 사용"
+title:  "Sublime Text 사용"
 comments: false
 categories: IDE
 tags: IDE, Text Editor, Sublime Text
