@@ -9,6 +9,8 @@ tags: devops, docker
 
 이번에는 Docker를 실제 사용해보자. Docker 사용 예로, Project Management application인 Redmine을 사용해보자.
 
+간단한 Docker 설명은 이전 POST [STARTING DOCKER](http://goldbassist.github.io/devops/2016/03/02/starting-docker/)를 참조하자.
+
 ### Case 1. Official Installation
 
 Docker를 사용하기 이전에 Redmine의 초기 설치법이 어떠한지 살펴보자.
