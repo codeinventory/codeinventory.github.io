@@ -11,6 +11,8 @@ tags: devops, docker
 
 간단한 Docker 설명은 이전 POST [STARTING DOCKER](http://goldbassist.github.io/devops/2016/03/02/starting-docker/)를 참조하자.
 
+<br>
+
 ### Case 1. Official Installation
 
 Docker를 사용하기 이전에 Redmine의 초기 설치법이 어떠한지 살펴보자.
@@ -56,7 +58,7 @@ $ docker pull redmine
 $ docker run redmine
 {% endhighlight %}
 
-http://192.168.99.100:3000 로 접속해보자.
+[http://192.168.99.100:3000/](http://192.168.99.100:3000/) 로 접속해보자.
 
 무엇인가 로그가 막 나오지만 Web으로 접속 할 수는 없다. container 내에서의 port가 막혀있기 때문이다.
 
@@ -66,7 +68,7 @@ http://192.168.99.100:3000 로 접속해보자.
 $ docker run -d --name redmine_container -p 3000:3000 redmine
 {% endhighlight %}
 
-이제 다시 http://192.168.99.100:3000/ 로 접속해보자. Redmine 초기 화면을 볼 수 있을 것이다.
+이제 다시 [http://192.168.99.100:3000/](http://192.168.99.100:3000/) 로 접속해보자. Redmine 초기 화면을 볼 수 있을 것이다.
 
 이렇게 Docker를 사용하면, 기존의 능력자들이 build 해논 Docker Image를 가지고 손쉽고 빠르게 Application을 사용할 수 있다.
 
