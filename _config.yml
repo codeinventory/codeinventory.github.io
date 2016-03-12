@@ -45,7 +45,7 @@ links:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Calcutta
 future:      true
-highlighter: pygments
+rouge: pygments
 markdown:    kramdown
 paginate:    5
 paginate_path: "page:num"
