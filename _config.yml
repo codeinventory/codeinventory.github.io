@@ -1,5 +1,5 @@
 title:            CodeInventory
-description:      "Nerd's feeder!"
+description:      "Code for joy, Not for bucks!"
 logo:             logo.png
 disqus_shortname: codeinventorycom
 share:            true
@@ -58,7 +58,7 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: false
+  enable_coderay: false
 
   coderay:
     coderay_line_numbers: 
@@ -69,4 +69,4 @@ kramdown:
 
 gems:
 - jemoji
-
+- jekyll-paginate

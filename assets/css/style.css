@@ -160,8 +160,9 @@ main, .notepad-share-icons, .notepad-disqus {
 .notepad-site-head .notepad-site-head-content {
   width: 100%;
   text-align: center;
+  background-size: cover;
   background-color: black;
-  background-size: cover; }
+  background-image: url("/images/UBB5kG4.jpg");}
   .notepad-site-head .notepad-site-head-content.with-bg-cover {
     background-color: rgba(0, 0, 0, 0.7); }
   .notepad-site-head .notepad-site-head-content .notepad-site-head-title-bg {
