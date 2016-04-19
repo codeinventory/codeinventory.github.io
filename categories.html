@@ -22,6 +22,7 @@ description: "An archive of posts sorted by categories."
 {% assign tags_list = nil %}
 </ul>
 
+
 {% for tag in site.categories %} 
   <h2 id="{{ tag[0] }}">{{ tag[0] | capitalize }}</h2>
   <ul class="post-list">
