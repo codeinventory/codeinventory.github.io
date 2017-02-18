@@ -11,11 +11,11 @@ tags:
 
 Bought a brand new NodeMCU couple of days back and i bet its much better than Arduino. 
 
-It have built in WiFi and thats very much like Arduino with batteries included ;) also arduino ide is compactible with NodeMCU that really sweet <3 , range of scanning Access Points is no less than any powerfull Mobile Phone. Another best feature is this magic piece supports Lua :), Highlevel modern lang, fastest executing scripting language which competes performace with C, litterally i have tested this, for small emmbeded devices to gients like <a href="https://www.nginx.com/case-studies/appnexus-chooses-nginx-plus-to-enhance-its-real-time-bidding-platform/" taarget="_blank" >AppNexus</a> having billion request per sec using Lua for its performace. 
+It has built in WiFi and that's very much like Arduino with batteries included ;) also arduino ide is compatible with NodeMCU that really sweet <3. Range of scanning Access Points is no less than any powerful Mobile Phone. Another best feature is this magic piece supports Lua :), Highlevel modern lang, fastest executing scripting language which competes performance with C, literally I have tested this, for small embedded devices to giants like <a href="https://www.nginx.com/case-studies/appnexus-chooses-nginx-plus-to-enhance-its-real-time-bidding-platform/" taarget="_blank" >AppNexus</a> having billion request per sec using Lua for its performance. 
 
 <img width="50%" height="50%" src="{{ site.url }}/images/nodemcu.jpg"/>
 
-Some of the interating and core facts about NodeMCU.
+Some of the interesting and core facts about NodeMCU.
 
 NodeMCU is an open source IoT platform. It includes firmware which runs on the ESP8266 Wi-Fi SoC from Espressif Systems, and hardware which is based on the ESP-12 module. The term "NodeMCU" by default refers to the firmware rather than the dev kits. The firmware uses the Lua scripting language. It is based on the eLua project, and built on the Espressif Non-OS SDK for ESP8266. It uses many open source projects, such as lua-cjson and spiffs.
 
@@ -105,3 +105,6 @@ m:close();
 -- you can call m:connect again
 
 ```
+
+
+Happy Coding ... :)
