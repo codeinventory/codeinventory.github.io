@@ -1,0 +1,12 @@
+version: '2'
+services:
+
+  api:
+    image: jekyll/jekyll
+    container_name: github-blog-local
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    command: sh -c 'jekyll serve -s /usr/src/app --watch'
+    ports:
+      - "4000:4000"
