@@ -13,9 +13,9 @@ url:        	http://goldbassist.github.io
 owner:
   name:           Seungrok Han
   avatar:         face.jpg
-  email:          goldbassist@naver.com
+  email:          goldbassist@naver.comhttps://www.centos.org/
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  
+  # https://www.centos.org/
   #description:    Programming is 1% knowledge, 2% ability and 97% getting the ability to work with the knowledge :)
   # Social networking links used in footer. Update and remove as you like.
   #twitter:        
@@ -47,7 +47,7 @@ links:
 timezone:    Asia/Seoul
 future:      true
 highlighter: rouge
-markdown:    kramdown
+#markdown:    kramdown
 paginate:    10
 paginate_path: "page:num"
 
@@ -68,9 +68,9 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: class
 
-gems:
-- jemoji
-- jekyll-paginate
+#ems:
+#- jemoji
+#- jekyll-paginate
 
 
 theme: jekyll-theme-minimal
