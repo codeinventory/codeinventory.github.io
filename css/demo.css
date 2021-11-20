@@ -1,0 +1,461 @@
+/* =================================================================== 
+ *  Imminent v1.0 Demo Stylesheet
+ *  Ver. 1.0.0
+ *  09-20-2019
+ * =================================================================== */
+
+
+/* ===================================================================
+ * # preloader
+ *
+ * ------------------------------------------------------------------- */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1d1d1d;
+  z-index: 500;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.no-js #preloader,
+.oldie #preloader {
+  display: none;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  display: inline-block;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+#loader > div {
+  content: "";
+  background: #ffffff;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+#loader > div:nth-of-type(1) {
+  left: 15px;
+}
+
+#loader > div:nth-of-type(3) {
+  left: -15px;
+}
+
+/* dots jump */
+.dots-jump > div {
+  -webkit-animation: dots-jump 1.2s infinite ease;
+  animation: dots-jump 1.2s infinite ease;
+  animation-delay: 0.2s;
+}
+
+.dots-jump > div:nth-of-type(1) {
+  animation-delay: 0.4s;
+}
+
+.dots-jump > div:nth-of-type(3) {
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes dots-jump {
+  0% {
+    top: 0;
+  }
+
+  40% {
+    top: -6px;
+  }
+
+  80% {
+    top: 0;
+  }
+
+}
+
+@keyframes dots-jump {
+  0% {
+    top: 0;
+  }
+
+  40% {
+    top: -6px;
+  }
+
+  80% {
+    top: 0;
+  }
+
+}
+
+/* dots fade */
+.dots-fade > div {
+  -webkit-animation: dots-fade 1.6s infinite ease;
+  animation: dots-fade 1.6s infinite ease;
+  animation-delay: 0.4s;
+}
+
+.dots-fade > div:nth-of-type(1) {
+  animation-delay: 0.8s;
+}
+
+.dots-fade > div:nth-of-type(3) {
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes dots-fade {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0.2;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes dots-fade {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0.2;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+}
+
+/* dots pulse */
+.dots-pulse > div {
+  -webkit-animation: dots-pulse 1.2s infinite ease;
+  animation: dots-pulse 1.2s infinite ease;
+  animation-delay: 0.2s;
+}
+
+.dots-pulse > div:nth-of-type(1) {
+  animation-delay: 0.4s;
+}
+
+.dots-pulse > div:nth-of-type(3) {
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes dots-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  40% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.3);
+  }
+
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+}
+
+@keyframes dots-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  40% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.3);
+  }
+
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+}
+
+
+/* ===================================================================
+ * # base style overrides
+ *
+ * ------------------------------------------------------------------- */
+html {
+  font-size: 10px;
+}
+
+@media screen and (max-width:400px) {
+  html {
+    font-size: 9.444444444444444px;
+  }
+
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #121212;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.778;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+a {
+  color: #8dc63f;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #33648a;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+h1,
+h3 {
+  font-style: normal;
+  color: #ffffff;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.167;
+}
+
+p.lead {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.8;
+  margin-bottom: 3.6rem;
+  color: #646464;
+}
+
+@media screen and (max-width:1200px) {
+  p.lead {
+    font-size: 1.9rem;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  p.lead {
+    font-size: 1.8rem;
+  }
+
+}
+
+
+/* ===================================================================
+ * layout style
+ *
+ * ------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------
+ * header
+ * ------------------------------------------------------------------- */
+header {
+  text-align: center;
+  padding: 6.8rem 0 1.6rem;
+  margin-bottom: 6.4rem;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+header .row {
+  max-width: 900px;
+}
+
+@media screen and (max-width:1200px) {
+  header .row {
+    max-width: 700px;
+  }
+
+}
+
+header h1 {
+  font-size: 5.2rem;
+  line-height: 1.385;
+  margin-bottom: 2.4rem;
+}
+
+header h1 span {
+  color: #8dc63f;
+}
+
+@media screen and (max-width:600px) {
+  header h1 {
+    font-size: 4rem;
+    letter-spacing: -.07rem;
+  }
+
+}
+
+/* ------------------------------------------------------------------- 
+ * main
+ * ------------------------------------------------------------------- */
+main {
+  text-align: center;
+  padding-bottom: 8rem;
+}
+
+main .row {
+  max-width: 1160px;
+}
+
+main .column {
+  margin-bottom: 3.2rem;
+}
+
+main .entry__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+main .entry__thumb a {
+  display: block;
+}
+
+main .entry__thumb a img {
+  vertical-align: bottom;
+}
+
+main .entry__thumb a::before {
+  content: "";
+  display: block;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .3s;
+  z-index: 1;
+}
+
+main .entry__thumb a::after {
+  content: "...";
+  font-family: georgia, serif;
+  font-size: 2.7rem;
+  z-index: 1;
+  display: block;
+  height: 30px;
+  width: 30px;
+  letter-spacing: -1px;
+  line-height: 30px;
+  margin-left: -15px;
+  margin-top: -30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  transition: all .3s;
+}
+
+main .entry__thumb:hover a::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+main .entry__thumb:hover a::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+main .entry__title {
+  padding-top: 2.8rem;
+}
+
+main .entry__title h3 {
+  font-size: 1.8rem;
+  line-height: 1.556;
+  margin-bottom: 1.6rem;
+  color: white;
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * main
+ * ------------------------------------------------------------------- */
+@media screen and (max-width:1200px) {
+  main .row {
+    max-width: 900px;
+  }
+
+}
+
+@media screen and (max-width:800px) {
+  main .row {
+    max-width: 500px;
+  }
+
+}
+
+/*# sourceMappingURL=demo.css.map */
